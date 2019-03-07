@@ -22,7 +22,7 @@ sh "docker push dobvinci/docker_exam:latest"
 
 stage('Apply changes to the environment') {
 sh "ls -l"
-docker run --name docker_exam:latest -p 1610:1610 -v /var/run/docker.sock:/var/run/docker.sock dobvinci/docker_exam:latest
+docker run --name docker_exam:latest -p 1610 -v /var/run/docker.sock:/var/run/docker.sock dobvinci/docker_exam:latest
 }
 
 
