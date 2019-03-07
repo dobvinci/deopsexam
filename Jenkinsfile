@@ -1,4 +1,4 @@
-try {
+//try {
 node {
     def app
 
@@ -16,12 +16,12 @@ node {
 
 
 }
-} catch(Error|Exception e) {
+/*} catch(Error|Exception e) {
   //Finish failing the build after telling someone about it
   throw e
 } finally {
         // Post build steps here
-        /* Success or failure, always run post build steps */
+        /* Success or failure, always run post build steps 
         // send email
         // publish test results etc etc
     }
