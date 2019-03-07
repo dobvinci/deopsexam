@@ -22,7 +22,7 @@ sh "docker push dobvinci/docker_exam:latest"
 
 stage('Apply changes to the environment') {
 sh "ls -l"
-sh "docker run -d -p 1610:/80/tcp docker_exam:latest"
+sh "docker run -d -p 1610:80/tcp docker_exam:latest"
 }
 
 
