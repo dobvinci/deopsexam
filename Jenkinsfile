@@ -15,14 +15,14 @@ sh "docker build -t docker_exam:latest ."
 }
 
 stage('Docker login to hub and push the image'){
-sh "docker login -u '' -p '' "
+sh "docker login -u 'dobvinci' -p 'Digital00*' "
 sh "docker tag docker_test:latest dobvinci/docker_exam:latest"
 sh "docker push dobvinci/docker_exam:latest"
 }
 
 stage('Apply changes to the environment') {
 sh "ls -l"
-
+sh "docker run -d -p 1610:/80/tcp docker_exam:latest"
 }
 
 
